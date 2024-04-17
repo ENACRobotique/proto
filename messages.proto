@@ -76,3 +76,7 @@ message Message {
   }
 }
 
+message IO {
+  int id = 1;
+  int valeur = 2;
+}
