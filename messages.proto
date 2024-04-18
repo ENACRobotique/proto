@@ -76,7 +76,4 @@ message Message {
   }
 }
 
-message IO {
-  int32 id = 1;
-  int32 val = 2;
-}
+

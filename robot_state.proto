@@ -22,8 +22,11 @@ message Ins {
     float vtheta = 1;
     float theta = 2;
 }
- 
 
+message IO {
+    int32 id = 1;
+    int32 val = 2;
+  }
 // message SetState {
 //     int32 plate_position = 1; // Position of the "plateau"
 //     int32 plate_number = 2; // Number of the action, value to display, ...
