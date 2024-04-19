@@ -12,6 +12,19 @@ message Position {
     float theta = 3;
 }
 
+message Position_aruco {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+    float theta = 4;
+}
+
+message Commande_solaire {
+    float x = 1;
+    float y = 2;
+    int32 rotation = 3;
+}
+
 message Speed {
     float vx = 1;
     float vy = 2;
