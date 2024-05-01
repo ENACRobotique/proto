@@ -19,10 +19,10 @@ message Position_aruco {
     float theta = 4;
 }
 
-message Commande_solaire {
-    float x = 1;
-    float y = 2;
-    int32 rotation = 3;
+message Eye {
+    int32 nombre_pot = 1;
+    bool serie = 2;
+    repeated float = 3;
 }
 
 message Speed {
