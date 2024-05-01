@@ -22,7 +22,7 @@ message Position_aruco {
 message Eye {
     int32 nombre_pot = 1;
     bool serie = 2;
-    repeated float = 3;
+    repeated float distance = 3;
 }
 
 message Speed {
