@@ -19,6 +19,26 @@ message Pos {
   PosObject obj = 4;
 }
 
+message System {
+  enum AsservFlags{
+    ASSERV_NONE = 0;
+    ASSERV_DIRECT = 0x1;
+    ASSERV_POS = 0x2;
+    ASSERV_SPEED = 0x4;
+  }
+  enum GuidanceFlags{
+    GUIDANCE_NONE = 0;
+    GUIDANCE_BASIC = 0x1;
+  }
+  enum OdometryFlags{  
+    ODOMETRY_NONE = 0;
+    ODOMETRY_ENABLED = 0x1;
+  }
+  uint32 asserv = 1;
+  uint32 guidance = 2;
+  uint32 odometry = 3;
+}
+
 message Speed {
   float vx = 1;
   float vy = 2;
@@ -73,6 +93,7 @@ message Message {
     MotorPid motor_pid = 9;
     Bat bat = 10;
     Ins ins = 11;
+    System system = 12;
   }
 }
 
