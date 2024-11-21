@@ -33,6 +33,8 @@ message System {
   enum OdometryFlags{  
     ODOMETRY_NONE = 0;
     ODOMETRY_ENABLED = 0x1;
+    ODOMETRY_INS_ON = 0x2;
+    
   }
   uint32 asserv = 1;
   uint32 guidance = 2;
