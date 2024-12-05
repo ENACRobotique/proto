@@ -29,6 +29,7 @@ message System {
   enum GuidanceFlags{
     GUIDANCE_NONE = 0;
     GUIDANCE_BASIC = 0x1;
+    GUIDANCE_ROBOT_FRAME = 0x2;
   }
   enum OdometryFlags{  
     ODOMETRY_NONE = 0;
