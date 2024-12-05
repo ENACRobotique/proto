@@ -21,13 +21,13 @@ message Pos {
 
 message System {
   enum AsservFlags{
-    ASSERV_NONE = 0;
+    ASSERV_DISABLED = 0;
     ASSERV_DIRECT = 0x1;
     ASSERV_POS = 0x2;
     ASSERV_SPEED = 0x4;
   }
   enum GuidanceFlags{
-    GUIDANCE_NONE = 0;
+    GUIDANCE_DISABLED = 0;
     GUIDANCE_BASIC = 0x1;
     GUIDANCE_ROBOT_FRAME = 0x2;
   }
