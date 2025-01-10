@@ -34,6 +34,11 @@ message Speed {
 message Ins {
     float vtheta = 1;
     float theta = 2;
+    float ax = 3;
+    float ay = 4;
+    float az = 5;
+    float gx = 6;
+    float gy = 7;
 }
 
 message IO {

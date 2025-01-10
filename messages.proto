@@ -79,6 +79,11 @@ message Ins {
   float theta = 2;
   float bias = 3;
   float variance = 4;
+  float ax = 5;
+  float ay = 6;
+  float az = 7;
+  float gx = 8;
+  float gy = 9;
 }
 
 message Message {
