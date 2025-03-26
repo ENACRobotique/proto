@@ -47,5 +47,6 @@ message SmartServo {
     uint32 speed = 13;
 
     uint32 multiturn_factor = 14;
+    bool unlock_eeprom = 15;
   
   }
