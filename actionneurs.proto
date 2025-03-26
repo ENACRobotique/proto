@@ -15,6 +15,7 @@ message SmartServo {
       SET_TORQUE = 8;
       TORQUE_ENABLE = 9;
       SET_LIMITS = 10;
+      SET_MULTITURN = 11;
       
     }
     enum ServoType {
@@ -44,5 +45,7 @@ message SmartServo {
     
     RotationDirection direction = 12;
     uint32 speed = 13;
+
+    uint32 multiturn_factor = 14;
   
   }
