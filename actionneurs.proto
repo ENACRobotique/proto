@@ -32,7 +32,7 @@ message SmartServo {
   
     uint32 newID = 4;
   
-    uint32 position = 5;
+    int32 position = 5;
     bool reg_write = 6;
   
     bool endless_status = 7;
