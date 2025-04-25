@@ -28,3 +28,9 @@ message Amalgames {
     repeated float size = 3;
 }
 
+message Balises {
+    // beacon position calculated based on the robot's odometry
+    repeated int32 index = 1;
+    repeated float x = 2;
+    repeated float y = 3;
+}
