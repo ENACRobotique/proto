@@ -16,7 +16,7 @@ message SmartServo {
       TORQUE_ENABLE = 9;
       SET_LIMITS = 10;
       SET_MULTITURN = 11;
-      
+      IS_MOVING = 12;
     }
     enum ServoType {
       STS = 0;
@@ -48,5 +48,5 @@ message SmartServo {
 
     uint32 multiturn_factor = 14;
     bool unlock_eeprom = 15;
-  
+    bool moving = 16;
   }
