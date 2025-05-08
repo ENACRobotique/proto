@@ -19,6 +19,7 @@ message Position_aruco {
     repeated float theta = 4;
     repeated float ArucoId = 5;
     repeated float index = 6;
+    string cameraName = 7;
 }
 
 message Eye {
