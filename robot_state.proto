@@ -20,6 +20,10 @@ message Position_aruco {
     repeated float ArucoId = 5;
     repeated float index = 6;
     string cameraName = 7;
+    repeated float qx = 8;
+    repeated float qy = 9;
+    repeated float qz = 10;
+    repeated float qw = 11;
 }
 
 message Eye {
