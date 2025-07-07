@@ -1,30 +1,17 @@
 syntax = "proto3";
 
-package protoduck;
-// base
+package enac;
 
-message Pos {
-  enum PosObject {
-    POS_ROBOT_W = 0;
-    POS_CARROT_W = 1;
-    POS_CARROT_R = 2;
-    POS_TARGET_W = 3;
-    POS_TARGET_R = 4;
-    RECALAGE = 5;
-    MOVE_ROBOT_R = 6;
-  }
-  float x = 1;
-  float y = 2;
-  float theta = 3;
-  PosObject obj = 4;
-}
+import "common.proto";
 
-
-
-message Speed {
-  float vx = 1;
-  float vy = 2;
-  float vtheta = 3;
+enum Topic {
+  POS_ROBOT_W = 0;
+  POS_CARROT_W = 1;
+  POS_CARROT_R = 2;
+  POS_TARGET_W = 3;
+  POS_TARGET_R = 4;
+  RECALAGE = 5;
+  MOVE_ROBOT_R = 6;
 }
 
 
@@ -51,12 +38,6 @@ message Bat {
   float voltage = 1;
 }
 
-message Ins {
-  float vtheta = 1;
-  float theta = 2;
-  float bias = 3;
-  float variance = 4;
-}
 
 message Message {
 
@@ -65,9 +46,10 @@ message Message {
     COMMAND = 1;
   }
 
+  Topic topic = 2;
   MsgType msg_type = 3;
   oneof inner {
-    Pos pos = 4;
+    Position pos = 4;
     Speed speed = 5;
     Motors motors = 6;
     MotorPid motor_pid = 9;
