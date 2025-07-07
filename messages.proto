@@ -36,10 +36,8 @@ message Motors {
     MOTORS_SPEED = 3;
     MOTORS_POS = 4;
   }
-  float m1 = 1;
-  float m2 = 2;
-  float m3 = 3;
-  MotorDataType type = 4;
+  repeated float m = 1;
+  MotorDataType type = 2;
 }
 
 message MotorPid {
