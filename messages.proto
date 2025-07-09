@@ -1,51 +1,17 @@
 syntax = "proto3";
 
-package protoduck;
-// base
+package enac;
 
-message Pos {
-  enum PosObject {
-    POS_ROBOT_W = 0;
-    POS_CARROT_W = 1;
-    POS_CARROT_R = 2;
-    POS_TARGET_W = 3;
-    POS_TARGET_R = 4;
-    RECALAGE = 5;
-    MOVE_ROBOT_R = 6;
-  }
-  float x = 1;
-  float y = 2;
-  float theta = 3;
-  PosObject obj = 4;
-}
+import "common.proto";
 
-message System {
-  enum AsservFlags{
-    ASSERV_DISABLED = 0;
-    ASSERV_DIRECT = 0x1;
-    ASSERV_POS = 0x2;
-    ASSERV_SPEED = 0x4;
-  }
-  enum GuidanceFlags{
-    GUIDANCE_DISABLED = 0;
-    GUIDANCE_BASIC = 0x1;
-    GUIDANCE_ROBOT_FRAME = 0x2;
-  }
-  enum OdometryFlags{  
-    ODOMETRY_NONE = 0;
-    ODOMETRY_ENABLED = 0x1;
-    ODOMETRY_INS_ON = 0x2;
-    
-  }
-  uint32 asserv = 1;
-  uint32 guidance = 2;
-  uint32 odometry = 3;
-}
-
-message Speed {
-  float vx = 1;
-  float vy = 2;
-  float vtheta = 3;
+enum Topic {
+  POS_ROBOT_W = 0;
+  POS_CARROT_W = 1;
+  POS_CARROT_R = 2;
+  POS_TARGET_W = 3;
+  POS_TARGET_R = 4;
+  RECALAGE = 5;
+  MOVE_ROBOT_R = 6;
 }
 
 
@@ -57,10 +23,8 @@ message Motors {
     MOTORS_SPEED = 3;
     MOTORS_POS = 4;
   }
-  float m1 = 1;
-  float m2 = 2;
-  float m3 = 3;
-  MotorDataType type = 4;
+  repeated float m = 1;
+  MotorDataType type = 2;
 }
 
 message MotorPid {
@@ -74,12 +38,6 @@ message Bat {
   float voltage = 1;
 }
 
-message Ins {
-  float vtheta = 1;
-  float theta = 2;
-  float bias = 3;
-  float variance = 4;
-}
 
 message Message {
 
@@ -88,15 +46,15 @@ message Message {
     COMMAND = 1;
   }
 
+  Topic topic = 2;
   MsgType msg_type = 3;
   oneof inner {
-    Pos pos = 4;
+    Position pos = 4;
     Speed speed = 5;
     Motors motors = 6;
     MotorPid motor_pid = 9;
     Bat bat = 10;
     Ins ins = 11;
-    System system = 12;
   }
 }
 
