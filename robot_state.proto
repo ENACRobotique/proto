@@ -12,22 +12,13 @@ message Position_aruco {
     repeated float x = 1;
     repeated float y = 2;
     repeated float z = 3;
-    repeated float theta = 4;
     repeated float ArucoId = 5;
-    repeated float index = 6;
     string cameraName = 7;
     repeated float qx = 8;
     repeated float qy = 9;
     repeated float qz = 10;
     repeated float qw = 11;
 }
-
-message Eye {
-    int32 nombre_pot = 1;
-    bool serie = 2;
-    repeated float distance = 3;
-}
-
 
 message IO {
     int32 id = 1;
@@ -71,24 +62,3 @@ message Side {
     }
     Color color = 1;
 }
-
-
-// message Match {
-//     string status = 1;
-//     int32 score = 2;
-// }
-
-
-// message SetState {
-//     int32 plate_position = 1; // Position of the "plateau"
-//     int32 plate_number = 2; // Number of the action, value to display, ...
-//     bool cerise_drop=3;
-//     int32 claw_state = 4;
-// }
-
-
-
-// message Action {
-//     int32 action = 1;
-// }
-
