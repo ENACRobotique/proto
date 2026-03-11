@@ -8,16 +8,20 @@ message no_args_func_ {
     float nothing = 1;
 }
 
-message Position_aruco {
-    repeated float x = 1;
-    repeated float y = 2;
-    repeated float z = 3;
-    repeated float ArucoId = 5;
-    string cameraName = 7;
-    repeated float qx = 8;
-    repeated float qy = 9;
-    repeated float qz = 10;
-    repeated float qw = 11;
+message Aruco {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+    float ArucoId = 5;
+    float qx = 8;
+    float qy = 9;
+    float qz = 10;
+    float qw = 11;
+}
+
+message Arucos {
+    repeated Aruco arucos = 1;
+    string cameraName = 2;
 }
 
 message IO {

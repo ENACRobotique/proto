@@ -14,6 +14,9 @@ message Speed {
     float vtheta = 3;
 }
 
+message Trajectoire {
+    repeated Position pos = 1;
+}
 
 message Ins {
     float vtheta = 1;

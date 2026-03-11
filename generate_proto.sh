@@ -4,4 +4,4 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 cd $SCRIPT_DIR
 mkdir -p ../generated
 
-protoc -I="." --python_out="../generated" *.proto --pyi_out="../generated"
+protoc -I="." --python_out="../generated" $(find ./ -iname "*.proto") --pyi_out="../generated"
