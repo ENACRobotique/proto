@@ -12,6 +12,7 @@ enum Topic {
   POS_TARGET_R = 4;
   RECALAGE = 5;
   MOVE_ROBOT_R = 6;
+  POS_LIDAR = 7;
 }
 
 
