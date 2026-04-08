@@ -13,6 +13,7 @@ enum Topic {
   RECALAGE = 5;
   MOVE_ROBOT_R = 6;
   POS_LIDAR = 7;
+  POS_ROBOT_EKF = 8;
 }
 
 
