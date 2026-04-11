@@ -66,3 +66,11 @@ message Side {
     }
     Color color = 1;
 }
+
+message Tirette {
+    enum TiretteState {
+        IN = 0;
+        OUT = 1;
+    }
+    TiretteState tirette_state = 1;
+}
