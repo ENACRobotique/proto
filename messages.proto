@@ -40,6 +40,9 @@ message Bat {
   float voltage = 1;
 }
 
+message Response {
+  uint32 status = 1;
+}
 
 message Message {
 
@@ -48,6 +51,7 @@ message Message {
     COMMAND = 1;
   }
 
+  uint32 r_id = 12; //request or response id
   Topic topic = 2;
   MsgType msg_type = 3;
   oneof inner {
@@ -57,7 +61,7 @@ message Message {
     MotorPid motor_pid = 9;
     Bat bat = 10;
     Ins ins = 11;
+    Response response = 13;
   }
 }
-
 
