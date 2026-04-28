@@ -59,6 +59,11 @@ message LCDEvent {
     int32 value = 2;
 }
 
+message Score {
+    int32 score = 1;
+}
+
+
 message Side {
     enum Color {
         BLUE = 0;
