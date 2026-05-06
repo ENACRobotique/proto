@@ -72,6 +72,10 @@ message Side {
     Color color = 1;
 }
 
+message Strat {
+    string strat = 1;
+}
+
 message Tirette {
     enum TiretteState {
         IN = 0;
