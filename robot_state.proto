@@ -24,6 +24,12 @@ message Arucos {
     string cameraName = 2;
 }
 
+message Aruco_UCD {
+    int32 frame_id = 1;
+    repeated Position pos = 2;
+    repeated float ArucoId = 5;
+}
+
 message IO {
     int32 id = 1;
     int32 val = 2;
