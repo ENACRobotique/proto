@@ -20,8 +20,14 @@ message Speed {
 
 
 message Ins {
+    enum InsState {
+        GYRO_BAD = 0;
+        GYRO_OK = 1;
+    }
+
     float vtheta = 1;
     float theta = 2;
     float bias = 3;
     float variance = 4;
+    InsState ins_state = 5;
   }
